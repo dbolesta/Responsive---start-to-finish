@@ -1,3 +1,16 @@
 .grid {
     display: flex;
+    flex-wrap: wrap;
+}
+
+
+// .col will change with media. .col--full will not
+.col {
+    flex: 0 0 100%;
+    box-sizing: border-box; // damon added? cause wasnt working on .bg-primary in _home-promo?
+}
+
+
+.col--full {
+    flex: 0 0 100%;
 }
