@@ -8,15 +8,16 @@ footer {
         content: '';
         display: block;
         position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
+        top: 30px;
+        bottom: 30px;
+        right: 30px;
+        left: 30px;
         background: url(../img/logo.svg);
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
         opacity: 0.05;
+        //padding: 30px;
     }
     
     a {
@@ -35,7 +36,7 @@ footer {
 .nav-footer {
     display: flex;
     justify-content: space-around;
-    width: 80%;
+    //width: 80%;
     margin: 0 auto;
     
     a {
@@ -43,4 +44,8 @@ footer {
         font-weight: $font-bold;
     }
     
+}
+
+.container--footer {
+    max-width: 25em;
 }

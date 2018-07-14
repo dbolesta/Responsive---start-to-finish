@@ -2,7 +2,6 @@
     box-sizing: border-box; 
 }
 
-
 body {
     color: $text-main;
     text-align: center;
@@ -28,6 +27,10 @@ img {
 
 .lg-screen {
     display: none;
+    @include respond-to(small) {
+        display: block;
+    } 
+    
 }
 
 

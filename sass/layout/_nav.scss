@@ -9,19 +9,32 @@
     
     transition: all ease-in-out 250ms;
     
+    @include respond-to(small){
+        position: relative;
+        flex: auto;
+        background: none;
+        margin-top: 1em;
+        margin-left: 2em;
+        left: 0;
+    }
+    
     ul {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         height: 100vh;
+        
+        @include respond-to(small){
+            flex-direction: row;
+            height: auto;
+        }
     }
+    
     
     li {
         //border-bottom: 1px solid rgba(0, 0, 0, 0.25);
         flex: 1 1 auto;
         display: flex;
-        //align-items: center;
-        //justify-content: center;
         
         a {
             color: $text-inverse;
@@ -31,9 +44,16 @@
             align-items: center;
             justify-content: center;
             flex-basis: 100%;
+            @include respond-to(small) {
+                justify-content: flex-end;
+            }
             
             &:hover{
                 background: rgba(0, 0, 0, .10);
+                @include respond-to(small) {
+                    background:none;
+                    color: darken($text-inverse, 15%);
+                }
             }
         }
         
@@ -55,6 +75,10 @@
     right: 1em;
     top: 1em;
     cursor: pointer;
+    
+    @include respond-to(small) {
+        display:none;
+    }
 }
 
 
